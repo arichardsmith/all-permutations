@@ -9,15 +9,15 @@ import all from 'all-variations'
 
 const foo = ['foo', 'bar', 'baz']
 const num = [1, 2, 3]
-const jandels = 'jandels'
+const jandals = 'jandals'
 
-const allVariations = all`${num}: ${foo}bar ${jandels}`
+const allVariations = all`${num}: ${foo}bar ${jandals}`
 /*
 [
-  '1: foobar jandels',
-  '1: barbar jandels',
-  '1: bazbar jandels',
-  '2: foobar jandels',
+  '1: foobar jandals',
+  '1: barbar jandals',
+  '1: bazbar jandals',
+  '2: foobar jandals',
   etc...
 ]
 */
