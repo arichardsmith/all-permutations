@@ -1,0 +1,34 @@
+{
+  "name": "all-variations",
+  "version": "0.1.1",
+  "description": "Tagged template literal that takes arrays and produces all possible variations of string",
+  "main": "dist/all-variations.js",
+  "module": "module/all-variations.js",
+  "types": "types/all-variations.d.ts",
+  "files": [
+    "dist/*.js",
+    "module/*.js",
+    "types/*.d.ts"
+  ],
+  "author": "Richard Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.3.1"
+  },
+  "scripts": {
+    "build": "rimraf module types dist && run-p build:mod build:types build:cjs",
+    "build:cjs": "tsc -p tsconfig.json",
+    "build:types": "tsc -p tsconfig.dec.json",
+    "build:mod": "tsc -p tsconfig.mod.json",
+    "dev": "tsc --watch --noEmit",
+    "test": "mocha -r ts-node/register test/*.ts"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+
+# Generated files
+dist
+module
+types
+
+# Editor config
+.vscode
