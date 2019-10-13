@@ -24,10 +24,11 @@
     "typescript": "^3.3.1"
   },
   "scripts": {
-    "build": "rimraf module types dist && run-p build:mod build:types build:cjs",
-    "build:cjs": "tsc -p tsconfig.json",
-    "build:types": "tsc -p tsconfig.dec.json",
-    "build:mod": "tsc -p tsconfig.mod.json",
+    "build": "run-p build:mod build:types build:cjs",
+    "build:cjs": "rimraf dist && tsc -p tsconfig.json",
+    "build:types": "rimraf types && tsc -p tsconfig.dec.json",
+    "build:mod": "rimraf module && tsc -p tsconfig.mod.json",
+    "clean": "rimraf module types dist",
     "dev": "tsc --watch --noEmit",
     "test": "mocha -r ts-node/register test/*.ts"
   }
