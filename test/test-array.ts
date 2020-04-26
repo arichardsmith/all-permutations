@@ -1,7 +1,7 @@
 import 'mocha'
 import { assert } from 'chai'
 
-import all from '../src/all-variations'
+import all from '../src/'
 
 describe('all-variations', () => {
   it('produces the correct amount of variations', () => {

@@ -1,10 +1,10 @@
 {
-  "name": "all-variations",
-  "version": "0.1.1",
-  "description": "Tagged template literal that takes arrays and produces all possible variations of string",
-  "main": "dist/all-variations.js",
-  "module": "module/all-variations.js",
-  "types": "types/all-variations.d.ts",
+  "name": "all-permutations",
+  "version": "0.2.1",
+  "description": "Tagged template literal that takes arrays and produces all possible permutations of string",
+  "main": "dist/index.js",
+  "module": "module/index.js",
+  "types": "types/index.d.ts",
   "files": [
     "dist/*.js",
     "module/*.js",
